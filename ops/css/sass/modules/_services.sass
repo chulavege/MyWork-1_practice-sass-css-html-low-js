@@ -1,0 +1,100 @@
+.services
+    width: 100%
+    max-height: 650px
+    height: 100%
+    display: flex
+    flex-direction: column
+    .container
+        width: 80%
+    &--top--content
+        color: #333333
+        text-align: center
+        padding-top: 60px
+        p
+            font-family: Kaushan
+            font-size: 24px
+            padding-bottom: 12px
+        h2
+            padding-bottom: 22px
+            font-size: 30px
+            @include mb
+            text-transform: uppercase
+        .mark-down
+            padding-bottom: 33px
+
+    &--down--content
+        padding-bottom: 60px
+        display: flex
+        text-align: left
+        flex-wrap: wrap
+        justify-content: space-between
+        h3
+            color: #333333
+            font-family: Montserrat
+            text-transform: uppercase
+            font-size: 14px
+            font-weight: regular
+            margin-bottom: 10px
+            vertical-align: top
+        p
+            color: #a6a6a6
+            font-family: Roboto
+            font-size: 15px
+            line-height: 24px
+        &--item
+            width: 30%
+            height: 120px
+            display: flex
+        .icons-content
+            margin-right: 30px
+            width: 40px
+            height: 30px
+            background-image: url(../../img/sprite2.png)
+        .item--2
+            background-position: 33px
+        .item--3
+            background-position: 66px
+        .item--4
+            background-position: 98px
+        .item--5
+            background-position: 133px
+        .item--6
+            background-position: 166px
+        .text-content
+            width: 100%
+
+            
+
+@media screen and (max-width: 1110px)
+    .services .container
+        width: 95%
+
+
+@media screen and (max-width: 920px)
+    .services--down--content
+        .icons-content
+            width: 44px
+        h3
+            font-size: 13px
+        p
+            font-size: 70%
+
+@media screen and (max-width: 800px)            
+    .services--down--content
+        text-align: center
+        &--item
+            margin-bottom: 50px
+            display: inline-block
+        .icons-content
+            width: 32px
+            margin: 0 auto
+            margin-bottom: 10px
+@media screen and (max-width: 470px)
+    .services .container
+        width: 98%
+        height: 100%
+    .text-content
+        h3
+            font-size: 10px
+        p
+            font-size: 8px

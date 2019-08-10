@@ -1,0 +1,256 @@
+.header-wrapper
+    position: relative
+    width: 100%
+    background-image: url(../../img/header.jpg)
+    background-position: center
+    background-size: cover
+    z-index: 5
+    &::before
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        bottom: 0
+        right: 0
+        opacity: 0.9
+        z-index: -1
+        background: linear-gradient(to bottom, #f38181 , #fce38a)
+.main-header
+    display: flex
+    flex-direction: column
+    max-height: 100%
+.header-top
+    display: flex
+    justify-content: space-between
+    padding-top: 28px
+.logo h2
+    @include mb
+    font-size: 30px
+.main-menu
+    margin-top: 11px
+    li
+        margin-right: 55px
+    li:nth-child(7)
+        margin-right: 0
+    a
+        position: relative
+        text-transform: uppercase
+        font-size: 14px
+        font-family: Montserrat
+        font-weight: 400
+    a::after
+        height: 12px
+        width: 100%
+        content: ''
+        position: absolute
+        top: 12px
+        right: 0
+        bottom: 0
+        left: 0
+        border-bottom: 3px solid
+        border-color: #fce38a
+        opacity: 0
+    a:hover
+        @include orange
+        transition: all .3s ease-in-out
+    a:hover::after
+        transition: all .3s ease-in-out
+        border-bottom: 3px solid
+        border-color: #fce38a
+        opacity: 1
+        
+    .cart
+        display: flex
+        width: 18px
+        height: 15px
+        background-image: url(../../img/sprite.png)
+        background-position: 0px
+
+    .glass
+        height: 18px
+        width: 19px
+        display: flex
+        background-image: url(../../img/sprite.png)
+        background-position: 19px
+
+        // //
+
+.header-center
+    margin-top: 140px
+    display: flex
+    flex-direction: column
+    text-align: center
+    h2
+        margin-bottom: 50px
+        font-size: 72px
+        font-family: Kaushan
+        font-weight: 400
+    h1
+        font-size: 150px
+        @include mb
+        text-transform: uppercase
+        line-height: 140px
+    span
+        width: 60px
+        height: 3px
+        background-color: #ffffff
+        margin: 0 auto
+        margin-top: 73px
+        margin-bottom: 50px
+.button-mn
+    height: 40px
+    width: 160px
+    border: 3px solid
+    align-self: center
+    padding: 10px 
+    text-transform: uppercase
+    font-size: 14px
+    @include mb
+
+    // //
+
+.header-bottom
+    margin-top: 147px
+    justify-content: center
+.item-bottom
+    margin-bottom: 28px
+    position: relative
+    margin-right: 30px
+    width: 280px
+    border-top: 3px solid #f7eac4
+    &:nth-child(4)
+        margin-right: 0
+.item-bottom:hover
+    border-top: 3px solid #ffffff
+    transition: all .1s ease-in-out
+.item-bottom::before
+    content: ''
+    position: absolute
+    height: 3px
+    top: -3px
+    width: 35%
+    left: 0
+    bottom: 0
+    right: 0
+    border-top: 3px solid #f38181
+    opacity: 0
+.item-bottom:nth-child(3)::before
+    left: 65%
+.item-bottom:nth-child(4)::before
+    left: 65%
+.item-bottom:hover::before
+    transition: all .4s ease-in-out
+    border-top: 3px solid #f38181
+    opacity: 1
+.numbers-bottom
+    @include mb
+    text-transform: uppercase
+    padding-top: 25px
+    span
+        font-size: 20px
+        padding-right: 10px
+    p
+        font-size: 14px
+        padding-top: 4px
+        
+            // //
+
+@media screen and (max-width: 1368px)
+    .container
+        width: 100%
+    .header-top
+        justify-content: space-around
+    .main-menu
+        li
+            margin-right: 25px
+    .header-center
+        width: 80%
+        padding-top: 3%
+        margin: 0 auto
+        h2
+            margin: 10px
+            font-size: 80px
+        h1
+            margin: 0 auto
+            font-size: 100px
+            line-height: 100px
+        span
+            margin: 40px auto
+    .header-bottom
+        width: 80%
+        margin: 4% auto 0
+        justify-content: space-around
+
+@media screen and (max-width: 700px)      
+    .header-top
+        flex-direction: column
+        text-align: center
+        padding-top: 15px
+    .header-center
+        padding: 0
+    .logo h2
+        font-size: 25px
+    .main-menu
+        display: none
+        border: 1px solid red
+    .mobile-menu
+        margin: 0 auto
+        margin-top: 20px
+        display: inline-block
+        position: relative
+        cursor: pointer
+        width: 40px
+        height: 100%
+        span
+            display: block
+            position: absolute
+            width: 100%
+            border: 2px solid #ffffff
+            border-radius: 3px
+            &:nth-child(1)
+                top: 0px
+                width: 60%
+                left: 22.5%
+            &:nth-child(2)
+                top: 10px
+            &:nth-child(3)
+                width: 60%
+                left: 22.5%
+                top: 20px
+
+    .header-center
+        margin-top: 50px
+        h2
+            font-size: 50px
+        h1
+            font-size: 60px
+            line-height: 50px
+    .header-bottom
+        margin-top: 30px
+    .numbers-bottom
+        padding-top: 5px
+        span
+            font-size: 10px
+            padding-right: 6px
+        p
+            font-size: 6px
+
+@media screen and (max-width: 480px)
+    .header-center
+        margin: 0 auto
+        margin-top: 50px
+        h2
+            font-size: 30px
+        h1
+            font-size: 40px
+    .header-bottom
+        justify-content: center
+        flex-direction: column
+    .numbers-bottom
+        justify-content: center
+    .item-bottom
+        width: 100%
+    .text-up
+        h2
+            margin: 0 5px
+    

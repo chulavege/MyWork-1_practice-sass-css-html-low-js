@@ -1,0 +1,18 @@
+@mixin mb {
+    font: {
+        family: Montserrat;
+        weight: 700;
+    }
+}
+
+@mixin rl {
+    font: {
+        family: Roboto;
+        weight: 300;
+        style: italic;
+    }
+}
+
+@mixin orange {
+    color: #fce38a
+}

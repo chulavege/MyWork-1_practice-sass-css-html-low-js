@@ -1,0 +1,106 @@
+
+.story-us
+    text-align: center
+    color: #333333
+    & .info-us-section
+    & .text-up
+        padding-top: 6%
+        p:first-of-type
+            font-family: Kaushan
+            font-family: 24px
+            font-weight: regular
+            padding-bottom: 2%
+        h2
+            text-transform: uppercase
+            @include mb
+            font-family: 30px
+            padding-bottom: 2.7%
+        p:last-of-type
+            line-height: 24px
+            font-family: Roboto
+            font-weight: regular
+            color: #999999
+            padding: 0 10% 6.66%
+    & .photo-us
+        display: flex
+        justify-content: space-around
+        padding-bottom: 7%
+        width: 100%
+        position: relative
+        z-index: 0
+        .img-wr
+            position: relative
+            width: 29%
+        .img-wr::after
+            content: ''
+            position: absolute
+            background-color: #95e1d3
+            right: -3%
+            bottom: -3%
+            width: 100%
+            height: 100%    
+            z-index: -1
+            opacity: 0
+            transition: all .4s ease-in-out
+        .img-wr:nth-child(1)::after
+            top: 3%
+            left: -3%
+        .img-wr:nth-child(2)::after
+            top: -3%
+            left: -3%
+            right: -3%
+            width: 106%
+            height: 15%
+        .img-wr:hover::after
+            opacity: 1
+        .img-item
+            width: 100%
+            height: 100%
+
+    // skills
+
+.skills
+    background-color: #95e1d3
+    &--content
+        width: 95%
+        display: flex   
+        margin: 0 auto
+    &--item
+        width: 20%
+        max-height: 270px
+        text-align: center
+        border: 1px solid #b5eae0
+        & p:first-of-type
+            padding-top: 20%
+            font-family: Montserrat
+            font-size: 72px
+            font-weight: bold
+        & p:last-of-type
+            padding: 0 5% 20% 5%
+            font-size: 14px
+            font-family: Montserrat
+            font-weight: regular
+            text-transform: uppercase
+
+@media screen and (max-width: 600px)
+    .skills
+        &--item
+            & p:first-of-type
+                font-size: 30px
+            & p:last-of-type
+                font-size: 10px
+                padding-right: 10%
+                padding-left: 10%
+
+@media screen and (max-width: 400px)
+    .skills
+        .skills--item
+            p:first-of-type
+                font-size: 14px
+            p:last-of-type
+                font-size: 8px
+            
+                       
+           
+            
+            
